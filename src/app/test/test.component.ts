@@ -2,16 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-test',
-  //templateUrl: './test.component.html',
-  template: `<div>
-              <h3>Inline Template</h3>
-            </div>`,
-  //styleUrls: ['./test.component.css'],
-  styles: [`
-    div {
-      color: red;
-    }
-  `]
+  template: `
+    <h2>Welcome RufusMace</h2>
+  `,
+  styleUrls: []
 })
 export class TestComponent implements OnInit {
 
