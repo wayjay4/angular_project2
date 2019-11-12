@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
     <div>
       <h2>Property Binding'</h2>
       <h3>Welcome, '{{name}}'</h3>
+      <input [id]="myId" type="text" value="rufusmace" /> <!-- property binding to the 'id' property -->
+      <input id="{{myId}}" type="text" value="rufusmace" /> <!-- interpolation binding to 'id', NOTE: this only works with strings -->
+
+      <br /><br />
+      <!-- examples -->
+      <input [id]="myId" [disabled]="false" type="text" value="rufusmace" />  <!-- property binding works with boolean -->
+      <input [id]="myId" disabled="{{false}}" type="text" value="rufusmace" />  <!-- interpolation binding does NOT work with boolean -->
     </div>
   `,
   styles: [`
@@ -23,6 +30,7 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
   public name = "RufusMace";
   public siteUrl = window.location.href;
+  public myId = "testId";
 
   constructor() { }
 
