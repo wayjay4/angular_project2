@@ -11,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
 
       <br /><br />
       <!-- examples -->
-      <input [id]="myId" [disabled]="false" type="text" value="rufusmace" />  <!-- property binding works with boolean -->
-      <input [id]="myId" disabled="{{false}}" type="text" value="rufusmace" />  <!-- interpolation binding does NOT work with boolean -->
+      <input [id]="myId" [disabled]="isDisabled" type="text" value="rufusmace" />  <!-- property binding works with boolean -->
+      <input [id]="myId" disabled="{{isDisabled}}" type="text" value="rufusmace" />  <!-- interpolation binding does NOT work with boolean -->
     </div>
   `,
   styles: [`
@@ -31,6 +31,7 @@ export class TestComponent implements OnInit {
   public name = "RufusMace";
   public siteUrl = window.location.href;
   public myId = "testId";
+  public isDisabled = false;
 
   constructor() { }
 
