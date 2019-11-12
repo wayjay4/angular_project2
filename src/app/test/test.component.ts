@@ -12,6 +12,8 @@ import { Component, OnInit } from '@angular/core';
       <p [class]="combiningClasses">Codevolution</p> <!-- using more than one class in a binding -->
 
       <p [class.text-danger]="hasError">Codevolution</p> <!-- using a boolean to decide if class should be applied or not -->
+
+      <p [ngClass]="messageClasses">Codevolution</p> <!-- another way of using more than one class in a binding with boolean -->
     </div>
   `,
   styles: [`
@@ -43,6 +45,12 @@ export class TestComponent implements OnInit {
   public successClass = "text-success";
   public combiningClasses = "text-success text-special";
   public hasError = true;
+  public isSpecial = true;
+  public messageClasses = {
+    "text-success": !this.hasError,
+    "text-danger": this.hasError,
+    "text-special": this.isSpecial
+  };
 
   constructor() { }
 
