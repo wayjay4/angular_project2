@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
       <p [class]="successClass">Codevolution</p>
       <p class="text-special" [class]="successClass">Codevolution</p> <!-- can only use one type of class definition not both, in this case the 'class binding' takes presidence over the tradtional class assignment -->
       <p [class]="combiningClasses">Codevolution</p> <!-- using more than one class in a binding -->
+
+      <p [class.text-danger]="hasError">Codevolution</p> <!-- using a boolean to decide if class should be applied or not -->
     </div>
   `,
   styles: [`
@@ -39,7 +41,8 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
   public name = "RufusMace";
   public successClass = "text-success";
-  public combiningClasses = "text-success text-special"
+  public combiningClasses = "text-success text-special";
+  public hasError = true;
 
   constructor() { }
 
