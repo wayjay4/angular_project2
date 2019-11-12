@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
       <p>the sum of (2+2) = '{{2+2}}'</p>
       <p>the string length of your name is: '{{name.length}}'</p>
       <p>your name in all caps: '{{name.toUpperCase()}}'</p>
+      <p>using a class function to display greeting: {{greetUser()}}</p>
+      <p>calling a javascript function: {{siteUrl}}</p>
     </div>
   `,
   styles: [`
@@ -26,10 +28,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
   public name = "RufusMace";
+  public siteUrl = window.location.href;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  greetUser(){
+    var greeting = "Hello, " + this.name + ".";
+    return greeting;
   }
 
 }
