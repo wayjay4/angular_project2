@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
     <div>
       <h2>Class Binding'</h2>
       <h3>Welcome, '{{name}}'</h3>
-      <p>Codevolution</p>
+      <p class="text-success">Codevolution</p>
+      <p [class]="successClass">Codevolution</p>
+      <p class="text-special" [class]="successClass">Codevolution</p> <!-- can only use one type of class definition not both, in this case the 'class binding' takes presidence over the tradtional class assignment -->
+      <p [class]="combiningClasses">Codevolution</p> <!-- using more than one class in a binding -->
     </div>
   `,
   styles: [`
@@ -29,12 +32,14 @@ import { Component, OnInit } from '@angular/core';
     }
 
     .text-special {
-      color: italic;
+      font-style: italic;
     }
   `]
 })
 export class TestComponent implements OnInit {
   public name = "RufusMace";
+  public successClass = "text-success";
+  public combiningClasses = "text-success text-special"
 
   constructor() { }
 
