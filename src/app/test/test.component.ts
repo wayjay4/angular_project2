@@ -4,15 +4,9 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   template: `
     <div>
-      <h2>Property Binding'</h2>
+      <h2>Class Binding'</h2>
       <h3>Welcome, '{{name}}'</h3>
-      <input [id]="myId" type="text" value="rufusmace" /> <!-- property binding to the 'id' property -->
-      <input id="{{myId}}" type="text" value="rufusmace" /> <!-- interpolation binding to 'id', NOTE: this only works with strings -->
-
-      <br /><br />
-      <!-- examples -->
-      <input [id]="myId" bind-disabled="isDisabled" type="text" value="rufusmace" />  <!-- property binding works with boolean -->
-      <input [id]="myId" disabled="{{isDisabled}}" type="text" value="rufusmace" />  <!-- interpolation binding does NOT work with boolean -->
+      <p>Codevolution</p>
     </div>
   `,
   styles: [`
@@ -25,13 +19,22 @@ import { Component, OnInit } from '@angular/core';
     div h2 {
       text-decoration: underline;
     }
+
+    .text-success {
+      color: green;
+    }
+
+    .text-danger {
+      color: red;
+    }
+
+    .text-special {
+      color: italic;
+    }
   `]
 })
 export class TestComponent implements OnInit {
   public name = "RufusMace";
-  public siteUrl = window.location.href;
-  public myId = "testId";
-  public isDisabled = false;
 
   constructor() { }
 
