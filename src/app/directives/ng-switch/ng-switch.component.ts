@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
       <h2>Welcome, {{name}}!</h2>
 
       <div [ngSwitch]="color">
-        <p *ngSwitchCase="'red'">You picked the {{color}} color</p>
-        <p *ngSwitchCase="'blue'">You picked the {{color}} color</p>
-        <p *ngSwitchCase="'green'">You picked the {{color}} color</p>
+        <p *ngSwitchCase="'red'">You picked the red color</p>
+        <p *ngSwitchCase="'blue'">You picked the blue color</p>
+        <p *ngSwitchCase="'green'">You picked the green color</p>
       </div>
     </div>
   `,
