@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-component-interaction',
@@ -21,6 +21,10 @@ import { Component, OnInit, Input } from '@angular/core';
         <h3>Welcome, {{dataObj.name}}!</h3>
         <p>your id is: {{dataObj.id}}</p>
       </div>
+
+      <div>
+        <button (click)="fireEvent()">Send Event to parent component</button>
+      </div>
     </div>
   `,
   styleUrls: ['./component-interaction.component.css']
@@ -28,11 +32,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ComponentInteractionComponent implements OnInit {
   //@Input () public parentData;  // example 1: simple input from parent
   //@Input ('parentData') public name; // example 2: using an alias
-  @Input ('parentData') public dataObj; // example 3: sending a data object {}
+  @Input('parentData') public dataObj; // example 3: sending a data object {}
+  @Output() public childEvent = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  fireEvent(){
+    this.childEvent.emit('Hey parentComponent, this is your childComponent');
+  }
 }

@@ -39,5 +39,6 @@
   <!-- <app-component-interaction [parentData]="name"></app-component-interaction> -->
 
   <!-- second: used for both third example -->
-  <app-component-interaction [parentData]="dataObj"></app-component-interaction>
+  <app-component-interaction (childEvent)="message=$event" [parentData]="dataObj"></app-component-interaction>
+  <p>the child's message to the parent: <br /> '{{message}}'</p>
 </div>

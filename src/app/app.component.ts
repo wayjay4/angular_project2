@@ -12,4 +12,5 @@ export class AppComponent {
     id: 21,
     name: "RufusMace"
   };
+  public message: "";
 }
