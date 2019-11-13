@@ -6,6 +6,7 @@ import { TestComponent } from './test/test.component';
 import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TemplateRefVarsComponent } from './template-ref-vars/template-ref-vars.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TemplateRefVarsComponent } from './template-ref-vars/template-ref-vars.
     TestComponent,
     StyleBindingComponent,
     EventBindingComponent,
-    TemplateRefVarsComponent
+    TemplateRefVarsComponent,
+    TwoWayBindingComponent
   ],
   imports: [
     BrowserModule
