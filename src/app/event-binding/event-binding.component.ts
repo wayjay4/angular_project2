@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
       <h2>Welcome, {{name}}!</h2>
       <p>Event Binding</p>
 
-      <button (click)="onClick()">Show Generated Greeting</button>
+      <button (click)="onClick($event)">Show Generated Greeting</button>
+
+      <button (click)="this.greeting='Welcome, dude!'">Another Greet Button</button>
 
       <p>{{greeting}}</p>
     </div>
@@ -23,9 +25,10 @@ export class EventBindingComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick(){
+  onClick(event){
     this.greeting = "Welcome to your application, "+this.name+"! (this is a generated greeting)"
     console.log(this.greeting);
+    console.log("event: "); console.log(event); console.dir(event); console.dir(event.type);
   }
 
 }
