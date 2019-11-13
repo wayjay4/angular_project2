@@ -17,12 +17,29 @@ import { Component, OnInit } from '@angular/core';
       1.) to add an else block, wrap the data in a 'ng-template' element using template reference var 'theElseBlock'
       2.) reference the elseBlock in the ngIf directive
     -->
+
+    <!--
+      Below is another example of ngIf directive using a 'thenBlock' and a 'elseBlock'
+    -->
+
+    <div>
+      <p *ngIf="isDisplayElem; then thenBlock; else elseBlock">
+      </p>
+
+      <ng-template #thenBlock>
+        This is the 'then' block.
+      </ng-template>
+
+      <ng-template #elseBlock>
+        This is the 'else' block.
+      </ng-template>
+    </div>
   `,
   styleUrls: ['./ng-if.component.css']
 })
 export class NgIfComponent implements OnInit {
   public name = "RufusMace";
-  public isDisplayElem = false;
+  public isDisplayElem = true;
 
   constructor() { }
 
