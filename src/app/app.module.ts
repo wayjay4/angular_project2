@@ -9,6 +9,7 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TemplateRefVarsComponent } from './template-ref-vars/template-ref-vars.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { NgIfComponent } from './directives/ng-if/ng-if.component';
+import { NgSwitchComponent } from './directives/ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NgIfComponent } from './directives/ng-if/ng-if.component';
     EventBindingComponent,
     TemplateRefVarsComponent,
     TwoWayBindingComponent,
-    NgIfComponent
+    NgIfComponent,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule,
