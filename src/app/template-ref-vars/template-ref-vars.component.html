@@ -1,5 +1,8 @@
 <div>
   <h2>Welcome, {{name}}!</h2>
-  <input type="text" />
-  <button>Log</button>
+  <input #myTemplateRefVar type="text" />  <!-- create a temprefvar by using a '#varName' -->
+  <button (click)="logMessage(myTemplateRefVar.value)">Log</button>
+  <p>
+    value: {{inputVal}}
+  </p>
 </div>

@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateRefVarsComponent implements OnInit {
   public name = "RufusMace";
+  public inputVal = "";
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  logMessage(val){
+    this.inputVal = val;
+    console.log("val: ");
+    console.dir(this.inputVal);
+  }
 }
