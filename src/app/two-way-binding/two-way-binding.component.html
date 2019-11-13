@@ -1,4 +1,9 @@
 <div>
   <h2>Welcome, {{name}}!</h2>
   <p>two-way-binding works!</p>
+
+    <input [(ngModel)]="username" type="text" />  <!-- the [] are for data binding and the () are for event binding -->
+  <p>
+    username: {{username}}
+  </p>
 </div>
