@@ -8,6 +8,7 @@ import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TemplateRefVarsComponent } from './template-ref-vars/template-ref-vars.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { NgIfComponent } from './directives/ng-if/ng-if.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
     StyleBindingComponent,
     EventBindingComponent,
     TemplateRefVarsComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    NgIfComponent
   ],
   imports: [
     BrowserModule,
