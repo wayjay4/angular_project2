@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipe.component.css']
 })
 export class PipeComponent implements OnInit {
+  public name = "rufus mace";
+  public person = {
+    firstName: "Rufus",
+    lastName: "Mace",
+    id: 21
+  };
 
   constructor() { }
 

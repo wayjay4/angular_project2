@@ -1,1 +1,11 @@
-<p>pipe works!</p>
+<div>
+  <p>lowercase: {{ name | lowercase }}</p>
+  <p>uppercase: {{ name | uppercase }}</p>
+  <p>titlecase: {{ name | titlecase }}</p>
+  <p>slice(3,5): {{ name | slice:3:5 }}</p>
+  <p>json: {{ person | json }}</p>
+
+  <p>number(1,2,3): {{ 5.678 | number:'1.2-3' }}</p>
+  <p>number(3,4,5): {{ 5.678 | number:'3.4-5' }}</p>
+  <p>number(3,1,2): {{ 5.678 | number:'3.1-2' }}</p>
+</div>
