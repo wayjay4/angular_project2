@@ -34,11 +34,15 @@
   <app-ng-for></app-ng-for>
 </div>
 
-<div style="display:block;">
+<div style="display:none;">
   <!-- first: used for both first and second examples -->
   <!-- <app-component-interaction [parentData]="name"></app-component-interaction> -->
 
   <!-- second: used for both third example -->
   <app-component-interaction (childEvent)="message=$event" [parentData]="dataObj"></app-component-interaction>
   <p>the child's message to the parent: <br /> '{{message}}'</p>
+</div>
+
+<div style="display:block;">
+  <app-pipe></app-pipe>
 </div>
