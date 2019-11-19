@@ -15,6 +15,7 @@ import { ComponentInteractionComponent } from './directives/component-interactio
 import { PipeComponent } from './pipes/pipe/pipe.component';
 import { EmployeeListComponent } from './services/employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './services/employee-detail/employee-detail.component';
+import { EmployeeService } from './services/shared/employee.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { EmployeeDetailComponent } from './services/employee-detail/employee-det
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
