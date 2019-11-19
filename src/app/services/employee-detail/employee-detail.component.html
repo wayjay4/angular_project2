@@ -1,0 +1,8 @@
+<div>
+  <h2>Employee Detail</h2>
+  <ul>
+    <li *ngFor="let employee of employees; index as i" style="list-style:square;">
+      id: {{employee.id}}, name: {{employee.name}}, age: {{employee.age}}
+    </li>
+  </ul>
+</div>

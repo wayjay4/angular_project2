@@ -14,6 +14,7 @@ import { NgForComponent } from './directives/ng-for/ng-for.component';
 import { ComponentInteractionComponent } from './directives/component-interaction/component-interaction.component';
 import { PipeComponent } from './pipes/pipe/pipe.component';
 import { EmployeeListComponent } from './services/employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './services/employee-detail/employee-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EmployeeListComponent } from './services/employee-list/employee-list.co
     NgForComponent,
     ComponentInteractionComponent,
     PipeComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
