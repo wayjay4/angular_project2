@@ -1,1 +1,12 @@
-<p>employee-list works!</p>
+<div>j
+    <ul>
+      <li *ngFor="let employee of employees; index as i" style="list-style:none;">
+        <p>
+          id: {{employee.id}}, <br />
+          name: {{employee.name}}, <br />
+          age: {{employee.age}}
+        </p>
+        <hr />
+      </li>
+    </ul>
+</div>
