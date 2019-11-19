@@ -13,6 +13,7 @@ import { NgSwitchComponent } from './directives/ng-switch/ng-switch.component';
 import { NgForComponent } from './directives/ng-for/ng-for.component';
 import { ComponentInteractionComponent } from './directives/component-interaction/component-interaction.component';
 import { PipeComponent } from './pipes/pipe/pipe.component';
+import { EmployeeListComponent } from './services/employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PipeComponent } from './pipes/pipe/pipe.component';
     NgSwitchComponent,
     NgForComponent,
     ComponentInteractionComponent,
-    PipeComponent
+    PipeComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
